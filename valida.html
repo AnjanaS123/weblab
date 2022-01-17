@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>validation</title>
+<script language="javascript">
+function validate()
+{
+var x=document.pfrm.pnme.value;
+var y=document.pfrm.cnme.value;
+var s=document.pfrm.mnme.value;
+if(x=="")
+ { 
+   alert("this feild must be filled");
+   return false;
+ }
+if(isNaN(y))
+ {
+   alert("it must be a number");
+   return false;
+}
+if(x!=""&&isNum(y))
+  { 
+alert("search successfullY");
+  }
+}
+</script>
+<style>
+body{background-color:yellow;}
+h1{color:red;}
+</style>
+</head>
+<body>
+<center>
+<h1>enter the product details</h1>
+<form action="action.php" method="post" name="pfrm">
+<table>
+<tr>
+<th>enter the product name:</th><th><input type="text" name="pnme"></th></tr>
+<tr><td>type of product</td><td>:<select>
+                <option>food</option>
+                <option>grocery</option>
+                <option>garments</option>
+                <option>cloths</option>
+                </select></td></tr>
+<tr><td>type of meterial:</td><td><input type="text" name="mnme"></td></tr>
+<tr><td>cost:</td><td><input type="text" name="cnme"></td></tr>
+<tr><td>manifacturing company:</td><td><textarea maxlenght=49>address:</textarea></td></tr></table>
+<input type="button" value="search" onClick="validate()">
+<center>
+</form>
+</body>
+</html>
