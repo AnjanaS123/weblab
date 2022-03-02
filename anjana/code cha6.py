@@ -1,0 +1,7 @@
+file1.open("demo.txt","r")
+content=file1.read()
+print(content)
+file1.close()
+file1=open("demo.txt","a")
+file1.write(" hai ..i am anjana")
+file1.close()
